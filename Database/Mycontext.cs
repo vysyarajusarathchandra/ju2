@@ -9,7 +9,8 @@ namespace ju.Database
         public DbSet<Book> Books { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=MAv-SQLSERVER;Database=sarath12345678912;Trusted_Connection=True;MultipleActiveREsultSets=True");
+            //optionsBuilder.UseSqlServer("Server=MAv-SQLSERVER;Database=sarath12345678912;Trusted_Connection=True;MultipleActiveREsultSets=True");
+            optionsBuilder.UseSqlServer("Data source = SARATH; Initial Catalog=Sarath1456789;User Id=akki;Password=1234;TrustServerCertificate=true");
         }
     }
 }

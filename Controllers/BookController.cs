@@ -16,11 +16,11 @@ namespace ju.Controllers
         private readonly IBookService BookService;
         private readonly IMapper _mapper;
         private readonly IConfiguration configuration;
-        public BookController(IuserService userService, IMapper mapper, IConfiguration configuration)
+        public BookController(IBookService bookService, IMapper mapper, IConfiguration _configuration)
         {
-            this.BookService = BookService;
+            this.BookService = bookService;
             _mapper = mapper;
-            this.configuration = configuration;
+            this.configuration = _configuration;
 
         }
         [HttpGet, Route("GetBooks")]
@@ -39,7 +39,7 @@ namespace ju.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpGet, Route("GetBookById/{Bookid}")]
+        [HttpGet, Route("GetBookById/{bookId}")]
         [Authorize]
 
 

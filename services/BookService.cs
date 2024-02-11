@@ -14,8 +14,7 @@ namespace ju.services
         {
             try
             {
-              
-                
+                book.User = context.Users.Find(book.UserId);
                     context.Books.Add(book);
                     context.SaveChanges();
 
